@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=EmergencyTasks.c
+SOURCEFILES_QUOTED_IF_SPACED=EmergencyTasks.c DoorControl.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/EmergencyTasks.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/EmergencyTasks.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/EmergencyTasks.o ${OBJECTDIR}/DoorControl.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/EmergencyTasks.o.d ${OBJECTDIR}/DoorControl.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/EmergencyTasks.o
+OBJECTFILES=${OBJECTDIR}/EmergencyTasks.o ${OBJECTDIR}/DoorControl.o
 
 # Source Files
-SOURCEFILES=EmergencyTasks.c
+SOURCEFILES=EmergencyTasks.c DoorControl.c
 
 
 CFLAGS=
@@ -106,12 +106,24 @@ ${OBJECTDIR}/EmergencyTasks.o: EmergencyTasks.c  nbproject/Makefile-${CND_CONF}.
 	@${RM} ${OBJECTDIR}/EmergencyTasks.o 
 	@${FIXDEPS} "${OBJECTDIR}/EmergencyTasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/EmergencyTasks.o.d" -o ${OBJECTDIR}/EmergencyTasks.o EmergencyTasks.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
+${OBJECTDIR}/DoorControl.o: DoorControl.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DoorControl.o.d 
+	@${RM} ${OBJECTDIR}/DoorControl.o 
+	@${FIXDEPS} "${OBJECTDIR}/DoorControl.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/DoorControl.o.d" -o ${OBJECTDIR}/DoorControl.o DoorControl.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
 else
 ${OBJECTDIR}/EmergencyTasks.o: EmergencyTasks.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/EmergencyTasks.o.d 
 	@${RM} ${OBJECTDIR}/EmergencyTasks.o 
 	@${FIXDEPS} "${OBJECTDIR}/EmergencyTasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/EmergencyTasks.o.d" -o ${OBJECTDIR}/EmergencyTasks.o EmergencyTasks.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/DoorControl.o: DoorControl.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/DoorControl.o.d 
+	@${RM} ${OBJECTDIR}/DoorControl.o 
+	@${FIXDEPS} "${OBJECTDIR}/DoorControl.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/DoorControl.o.d" -o ${OBJECTDIR}/DoorControl.o DoorControl.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
 	
 endif
 
