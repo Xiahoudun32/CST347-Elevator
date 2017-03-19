@@ -2,11 +2,17 @@
 
 
 
-QueueHandle_t bp_message_Queue[QUEUE_SIZE]= {NULL};
+QueueHandle_t bp_message_Queue = NULL;
 
-QueueHandle_t queueConfig(){
-    int i = 0;
-    for(i = 0; i < QUEUE_SIZE; i++){
-        bp_message_Queue[i] = xQueueCreate(20, QUEUE_DEPTH);
-    }
+/* bp_queue_config
+ * 
+ *  This function sets up queues with a depth of 5. Each item
+ *  in the queue can be under 20 bytes.
+ * 
+ *  passed: nothing
+ * 
+ *  returns: nothing
+ */
+QueueHandle_t bp_queue_config(){
+    bp_message_Queue = xQueueCreate(QUEUE_DEPTH, QUEUE_ITEM_SIZE);
 }

@@ -12,13 +12,13 @@
 #include <FreeRTOS.h>
 #include <queue.h>
 
-#define QUEUE_SIZE 1
+#define QUEUE_ITEM_SIZE 20
 #define QUEUE_DEPTH 5
 
 
-extern QueueHandle_t bp_message_Queue[QUEUE_SIZE];
+extern QueueHandle_t bp_message_Queue;
 
-
+QueueHandle_t bp_queue_config();
 
 #endif	/* BUTTONPOLLINGQUEUES_H */
 

@@ -1,4 +1,6 @@
 #include "ButtonPollingTask.h"
+#include "queue.h"
+#include "ButtonPollingQueues.h"
 TaskHandle_t bp_TaskHandle = NULL;
 
 /*
@@ -11,36 +13,42 @@ TaskHandle_t bp_TaskHandle = NULL;
  */
 void bp_main_task(void * parameters){
     
+    char sw1Msg[] = "Switch 1 pressed";
+    char sw2Msg[] = "Switch 2 pressed";
+    char sw3Msg[] = "Switch 3 pressed";
+    char rc1Msg[] = "RC1 pressed";
+    char rc2Msg[] = "RC2 pressed";
+    
     while(1){
         //SW1- p2 button inside car
         if(PORTDbits.RD6==0){
             
             if(bp_debounce(_PORTD_RD6_MASK, BP_PORTD)){
-                
+                xQueueSendToBack(bp_message_Queue, sw1Msg, 0);
             }
         }
         //SW2- p1 button inside car
         else if(PORTDbits.RD7==0){
             if(bp_debounce(_PORTD_RD7_MASK, BP_PORTD)){
-                
+                xQueueSendToBack(bp_message_Queue, sw2Msg, 0);
             }
         }
         //SW3- GD button inside car
         else if(PORTDbits.RD13==0){
             if(bp_debounce(_PORTD_RD13_MASK, BP_PORTD)){
-                
+                xQueueSendToBack(bp_message_Queue, sw3Msg, 0);
             }
         }
         //open door inside car
         else if(PORTCbits.RC1==0){
             if(bp_debounce(_PORTC_RC1_MASK, BP_PORTC)){
-                
+                xQueueSendToBack(bp_message_Queue, rc1Msg, 0);
             }
         }
         //close door inside car
         else if(PORTCbits.RC2==0){
             if(bp_debounce(_PORTC_RC2_MASK, BP_PORTC)){
-                
+                xQueueSendToBack(bp_message_Queue, rc2Msg, 0);
             }
         }
         vTaskDelay(POST_SAMPLE_DELAY/portTICK_RATE_MS);
