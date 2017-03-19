@@ -1,0 +1,27 @@
+Task List, final:
+
+Emergency Task
+- Matt Schacht, Francis Bartholomew
+
+Door Control Task
+- Francis Bartholomew
+
+Motor Control Task
+- David Wing
+
+Elevator Control Task
+- Zackery Rogers
+
+UART TX/RX Tasks
+- Daniel Stotts
+
+Button/Switch Control Task
+- Kelly Honsinger
+
+LED Control Task
+- Michael Cooley
+
+CLI
+- Daniel Stotts
+
+Zackery Rogers has been volunteered to deliver software coding guidelines and naming conventions/specs

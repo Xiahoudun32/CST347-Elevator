@@ -1,0 +1,5 @@
+
+#ifndef _EMERGENCYTASKS_H    
+#define _EMERGENCYTASKS_H
+
+#endif /* _EMERGENCYTASKS_H */
