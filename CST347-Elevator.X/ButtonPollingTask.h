@@ -24,15 +24,6 @@ typedef enum PORTS{
     BP_PORTC
 };
 
-
-typedef enum BUTTON_CMDS{
-    UP,
-    DOWN,
-    STOPPED
-};
-
-
-
 typedef enum FLOORS{
     GND,
     P1,
