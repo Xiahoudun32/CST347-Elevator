@@ -1,6 +1,4 @@
 #include "ButtonPollingTask.h"
-#include "queue.h"
-#include "ButtonPollingQueues.h"
 TaskHandle_t bp_TaskHandle = NULL;
 
 /*
@@ -11,49 +9,81 @@ TaskHandle_t bp_TaskHandle = NULL;
  *  
  *  returns: Nothing
  */
-void bp_main_task(void * parameters){
+void bp_main_task(void * parameters){    
+    /*THESE WILL BE GLOBAL IN THE FUTURE. LOCAL FOR NOW
+     *
+     * The target floor will be modified by the butting polling routine.
+     * It will make sure not to update the target floor if the elevator is moving.
+     * 
+     * Target floor will only be modified by button polling.
+     * 
+     * Current floor will only be modified by motor controller.
+     * 
+     * It will be the job of the motor controller routine 
+     * to determine the direction the elevator is moving and the 
+     * current state the elevator is in(ie. P1, P2, GND, moving).
+     * 
+     * The butting polling routine will be in charge 
+     * 
+     * 
+     * Future notes. I have not implemented open door logic. IE if 
+     */
+    int currentFloor = GND;
+    int targetFloor = GND;
     
-    char sw1Msg[] = "Switch 1 pressed";
-    char sw2Msg[] = "Switch 2 pressed";
-    char sw3Msg[] = "Switch 3 pressed";
-    char rc1Msg[] = "RC1 pressed";
-    char rc2Msg[] = "RC2 pressed";
+    //GLOBAL PARAM INDICATING EMERGENCY
+    int emergencyMode = 0;
+    
     
     while(1){
+        
+        if(!emergencyMode)
         //SW1- p2 button inside car
-        if(PORTDbits.RD6==0){
-            
-            if(bp_debounce(_PORTD_RD6_MASK, BP_PORTD)){
-                xQueueSendToBack(bp_message_Queue, sw1Msg, 0);
+        {
+            if(PORTDbits.RD6==0){
+                if(bp_debounce(_PORTD_RD6_MASK, BP_PORTD)){
+                    if(currentFloor == P1 || currentFloor == GND){
+                        targetFloor = P2;
+                    }
+                }
+            }
+            //SW2- p1 button inside car
+            else if(PORTDbits.RD7==0){
+                if(bp_debounce(_PORTD_RD7_MASK, BP_PORTD)){
+                    if(currentFloor==P2 || currentFloor == GND)
+                    {
+                        targetFloor = P1;
+                    }
+                }
+            }
+            //SW3- GD button inside car
+            else if(PORTDbits.RD13==0){
+                if(bp_debounce(_PORTD_RD13_MASK, BP_PORTD)){
+                    if(currentFloor == P2 || currentFloor == P1){
+                        targetFloor = GND;
+                    }
+                }
             }
         }
-        //SW2- p1 button inside car
-        else if(PORTDbits.RD7==0){
-            if(bp_debounce(_PORTD_RD7_MASK, BP_PORTD)){
-                xQueueSendToBack(bp_message_Queue, sw2Msg, 0);
-            }
-        }
-        //SW3- GD button inside car
-        else if(PORTDbits.RD13==0){
-            if(bp_debounce(_PORTD_RD13_MASK, BP_PORTD)){
-                xQueueSendToBack(bp_message_Queue, sw3Msg, 0);
-            }
-        }
-        //open door inside car
+      
+        //set off emergency
         else if(PORTCbits.RC1==0){
             if(bp_debounce(_PORTC_RC1_MASK, BP_PORTC)){
-                xQueueSendToBack(bp_message_Queue, rc1Msg, 0);
-            }
+                if(!emergencyMode){
+                    targetFloor= GND;
+                    emergencyMode  = 1;
+                }
+            }   
         }
-        //close door inside car
+        //clear emergency
         else if(PORTCbits.RC2==0){
             if(bp_debounce(_PORTC_RC2_MASK, BP_PORTC)){
-                xQueueSendToBack(bp_message_Queue, rc2Msg, 0);
+                if(currentFloor == GND) //elevator must be at gnd for emergency clear
+                    emergencyMode = 0; 
             }
         }
         vTaskDelay(POST_SAMPLE_DELAY/portTICK_RATE_MS);
     }
-   
 } 
 
 /* bp_config

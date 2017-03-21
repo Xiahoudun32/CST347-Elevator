@@ -12,11 +12,32 @@
 #include <task.h>
 #include <timers.h>
 
+
+
+#include "queue.h"
+#include "ButtonPollingQueues.h"
+
 #define POST_SAMPLE_DELAY 10
 
 typedef enum PORTS{
     BP_PORTD,
     BP_PORTC
+};
+
+
+typedef enum BUTTON_CMDS{
+    UP,
+    DOWN,
+    STOPPED
+};
+
+
+
+typedef enum FLOORS{
+    GND,
+    P1,
+    P2,
+    MOVING//case where elevator isn't processing requests
 };
 
 extern TaskHandle_t bp_TaskHandle;
