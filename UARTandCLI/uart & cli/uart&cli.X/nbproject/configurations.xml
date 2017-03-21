@@ -8,11 +8,8 @@
         <itemPath>include/leddrv.h</itemPath>
         <itemPath>include/swdrv.h</itemPath>
         <itemPath>include/isruartdrv.h</itemPath>
-<<<<<<< HEAD
         <itemPath>include/ButtonPollingTask.h</itemPath>
         <itemPath>include/ElevatorControl.h</itemPath>
-=======
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
       </logicalFolder>
       <logicalFolder name="f1" displayName="FreeRTOS" projectFiles="true">
         <itemPath>../../FreeRTOS/Source/include/FreeRTOS.h</itemPath>
@@ -38,11 +35,8 @@
         <itemPath>src/leddrv.c</itemPath>
         <itemPath>src/swdrv.c</itemPath>
         <itemPath>src/isruartdrv.c</itemPath>
-<<<<<<< HEAD
         <itemPath>src/ButtonPollingTask.c</itemPath>
         <itemPath>src/ElevatorControl.c</itemPath>
-=======
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
       </logicalFolder>
       <logicalFolder name="f1" displayName="FreeRTOS" projectFiles="true">
         <itemPath>../../FreeRTOS/Source/list.c</itemPath>
@@ -113,11 +107,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-<<<<<<< HEAD
                   value="./include;../../FreeRTOS/Source/include;../../FreeRTOS/Source/portable/MPLAB/PIC32MX;../../FreeRTOS-Plus-CLI;include"/>
-=======
-                  value="./include;../../FreeRTOS/Source/include;../../FreeRTOS/Source/portable/MPLAB/PIC32MX;../../FreeRTOS-Plus-CLI"/>
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
@@ -144,11 +134,7 @@
         <property key="expand-macros" value="false"/>
         <property key="extra-include-directories-for-assembler" value=""/>
         <property key="extra-include-directories-for-preprocessor"
-<<<<<<< HEAD
                   value="./include;../../FreeRTOS/Source/include;../../FreeRTOS/Source/portable/MPLAB/PIC32MX;../../FreeRTOS-Plus-CLI;include"/>
-=======
-                  value="./include;../../FreeRTOS/Source/include;../../FreeRTOS/Source/portable/MPLAB/PIC32MX;../../FreeRTOS-Plus-CLI"/>
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
         <property key="false-conditionals" value="false"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
@@ -280,10 +266,6 @@
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-<<<<<<< HEAD
-=======
-        <property key="firmware.download.all" value="false"/>
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="hwtoolclock.instructionspeed" value="4"/>
         <property key="hwtoolclock.units" value="mips"/>

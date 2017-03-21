@@ -20,10 +20,7 @@
 #include "leddrv.h"
 #include "swdrv.h"
 #include "isruartdrv.h"
-<<<<<<< HEAD
 #include "ElevatorControl.h"
-=======
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 
 
 /* Hardware configuration. */
@@ -66,22 +63,13 @@ int main(void)
 {
     /* Perform any hardware initialization that may be necessary. */
     prvSetupHardware();
-<<<<<<< HEAD
 
 
-=======
-    
-    
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 #if (1 == DEBUG_TASK)
     // Perform testing within a task
     d_testTask();
 #endif
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 #if (0 == DEBUG_TASK)
     // Perform lab requirements
     d_labTasks();
@@ -92,7 +80,6 @@ int main(void)
 }
 
 #if (1 == DEBUG_TASK)
-<<<<<<< HEAD
 
 static void d_testTask(void)
 {
@@ -106,20 +93,6 @@ static void d_testTask(void)
                 1,
                 &handle
                 );
-=======
-static void d_testTask(void)
-{
-    TaskHandle_t handle = NULL;
-    
-    xTaskCreate(
-        d_testFunction,
-        "TEST",
-        configMINIMAL_STACK_SIZE,
-        NULL,
-        1,
-        &handle
-    );
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 }
 #endif
 
@@ -127,11 +100,7 @@ static void d_testTask(void)
 /* //// Define CLI functions here //// */
 static const char taskListHdr[] = "Name\t\tStat\tPri\tS/Space\tTCB";
 
-<<<<<<< HEAD
 portBASE_TYPE prvTaskStatsCommand(int8_t *pcWriteBuffer,
-=======
-portBASE_TYPE prvTaskStatsCommand(int8_t *pcWriteBuffer, 
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
                                   size_t xWriteBufferLen,
                                   const int8_t *pcCommandString)
 {
@@ -143,7 +112,6 @@ portBASE_TYPE prvTaskStatsCommand(int8_t *pcWriteBuffer,
 }
 
 static const xCommandLineInput xTaskStatsCommand = {"task-stats",
-<<<<<<< HEAD
     "task-stats: Displays a table of task state information\r\n",
     prvTaskStatsCommand,
     0};
@@ -167,31 +135,6 @@ portBASE_TYPE StartLEDn(int8_t *pcWriteBuffer,
     if (id < 0 || id > 2) return pdFALSE;
 
     if (enable[id] == 0)
-=======
-            "task-stats: Displays a table of task state information\r\n",
-            prvTaskStatsCommand,
-            0};
-
-portBASE_TYPE StartLEDn(int8_t *pcWriteBuffer, 
-                                  size_t xWriteBufferLen,
-                                  const int8_t *pcCommandString)
-{
-    int length1, length2, id, delay;
-    char * idp, * delayp;
-    
-    idp = FreeRTOS_CLIGetParameter(pcCommandString, 1, &length1);
-    delayp = FreeRTOS_CLIGetParameter(pcCommandString, 2, &length2);
-    
-    idp[length1] = 0;
-    delayp[length2] = 0;
-    
-    id = atoi(idp);
-    delay = atoi(delayp);
-    
-    if(id < 0 || id > 2) return pdFALSE;
-    
-    if(enable[id] == 0)
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     {
         enable[id] = 1;
         d_ledn_message message;
@@ -208,7 +151,6 @@ portBASE_TYPE StartLEDn(int8_t *pcWriteBuffer,
 }
 
 static const xCommandLineInput StartLEDnHeader = {"start_led",
-<<<<<<< HEAD
     "start_led <n> <delay>: start led n blinking at <delay> ms\r\n",
     StartLEDn,
     2};
@@ -229,28 +171,6 @@ portBASE_TYPE StopLEDn(int8_t *pcWriteBuffer,
     if (id < 0 || id > 2) return pdFALSE;
 
     if (enable[id] == 1)
-=======
-            "start_led <n> <delay>: start led n blinking at <delay> ms\r\n",
-            StartLEDn,
-            2};
-
-portBASE_TYPE StopLEDn(int8_t *pcWriteBuffer, 
-                                  size_t xWriteBufferLen,
-                                  const int8_t *pcCommandString)
-{
-    int length1, length2, id, delay;
-    char * idp, * delayp;
-    
-    idp = FreeRTOS_CLIGetParameter(pcCommandString, 1, &length1);
-    idp[length1] = 0;
-    id = atoi(idp);
-    
-    delay = 0;
-    
-    if(id < 0 || id > 2) return pdFALSE;
-    
-    if(enable[id] == 1)
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     {
         enable[id] = 0;
         d_ledn_message message;
@@ -262,16 +182,11 @@ portBASE_TYPE StopLEDn(int8_t *pcWriteBuffer,
         sprintf(pcWriteBuffer, "LED already stopped\r\n");
         pcWriteBuffer += strlen("LED already stopped\r\n");
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     return pdFALSE;
 }
 
 static const xCommandLineInput StopLEDnHeader = {"stop_led",
-<<<<<<< HEAD
     "stop_led <n>: stop led n blinking\r\n",
     StopLEDn,
     1};
@@ -295,31 +210,6 @@ portBASE_TYPE ChangeLEDn(int8_t *pcWriteBuffer,
     if (id < 0 || id > 2) return pdFALSE;
 
     if (enable[id] == 1)
-=======
-            "stop_led <n>: stop led n blinking\r\n",
-            StopLEDn,
-            1};
-
-portBASE_TYPE ChangeLEDn(int8_t *pcWriteBuffer, 
-                                  size_t xWriteBufferLen,
-                                  const int8_t *pcCommandString)
-{
-    int length1, length2, id, delay;
-    char * idp, * delayp;
-    
-    idp = FreeRTOS_CLIGetParameter(pcCommandString, 1, &length1);
-    delayp = FreeRTOS_CLIGetParameter(pcCommandString, 2, &length2);
-    
-    idp[length1] = 0;
-    delayp[length2] = 0;
-    
-    id = atoi(idp);
-    delay = atoi(delayp);
-    
-    if(id < 0 || id > 2) return pdFALSE;
-    
-    if(enable[id] == 1)
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     {
         d_ledn_message message;
         message.delay = delay;
@@ -335,30 +225,18 @@ portBASE_TYPE ChangeLEDn(int8_t *pcWriteBuffer,
 }
 
 static const xCommandLineInput ChangeLEDnHeader = {"change_led",
-<<<<<<< HEAD
     "change_led <n> <delay>: change led n blinking to <delay> ms\r\n",
     ChangeLEDn,
     2};
-=======
-            "change_led <n> <delay>: change led n blinking to <delay> ms\r\n",
-            ChangeLEDn,
-            2};
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 /* //// End of CLI function definitions //// */
 
 /* //// Define UART invokable functions here //// */
 int lab5(void * rx_arg, char a)
 {
     d_rx_parameter * q = (d_rx_parameter *) rx_arg;
-<<<<<<< HEAD
 
     // 0x31 instead of 0x30 to add an offset; keys 1 - 3 instead of 0 - 2
     if (a - 0x31 >= 0 && a - 0x31 <= 2)
-=======
-    
-    // 0x31 instead of 0x30 to add an offset; keys 1 - 3 instead of 0 - 2
-    if(a - 0x31 >= 0 && a - 0x31 <= 2)
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     {
         uint8_t c = (uint8_t) a - 0x31;
         xQueueSendToBack(q->lednQ, &c, portMAX_DELAY);
@@ -370,7 +248,6 @@ int lab6(void * rx_arg, char * str)
 {
     d_rx_parameter * q = (d_rx_parameter *) rx_arg;
     int r = 0;
-<<<<<<< HEAD
 
     xQueueSendToBack(q->txQ, (void *) "\r\n", portMAX_DELAY);
 
@@ -389,49 +266,22 @@ int lab6(void * rx_arg, char * str)
     return 0;
 }
 
-=======
-    
-    xQueueSendToBack(q->txQ, (void *) "\r\n", portMAX_DELAY);
-    
-    char wbuf[d_UART_BUFFER_DEPTH] = { [0 ... d_UART_BUFFER_DEPTH - 1] = 0 };
-    do {
-        r = FreeRTOS_CLIProcessCommand(str, wbuf, sizeof(wbuf) - 1);
-        xQueueSendToBack(q->txQ, (void *) wbuf, portMAX_DELAY);
-        memset(wbuf, 0, sizeof(wbuf) / sizeof(char));
-    } while(r == pdTRUE);
-    
-    xQueueSendToBack(q->txQ, (void *) "\r\n", portMAX_DELAY);
-//    xQueueSendToBack(q->txQ, (void *) str, portMAX_DELAY);
-//    xQueueSendToBack(q->txQ, (void *) "\r\n", portMAX_DELAY);
-    
-    return 0;
-}
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 /* //// End of RX invokable function definitions //// */
 
 static void d_labTasks(void)
 {
     // Prepare variables
     int i;
-<<<<<<< HEAD
     for (i = 0; i < sizeof (enable); ++i)
     {
         enable[i] = 0;
     }
 
-=======
-    for(i = 0; i < sizeof(enable); ++i)
-    {
-        enable[i] = 0;
-    }    
-    
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     // Register CLI functions
     FreeRTOS_CLIRegisterCommand(&xTaskStatsCommand);
     FreeRTOS_CLIRegisterCommand(&StartLEDnHeader);
     FreeRTOS_CLIRegisterCommand(&StopLEDnHeader);
     FreeRTOS_CLIRegisterCommand(&ChangeLEDnHeader);
-<<<<<<< HEAD
 
     // Register UART invokable functions
     //int n = d_register_rx_invokable(&lab5, 1);
@@ -449,68 +299,32 @@ static void d_labTasks(void)
         lednQ[i] = xQueueCreate(5, sizeof (d_ledn_message));
     }
 
-=======
-    
-    // Register UART invokable functions
-    //int n = d_register_rx_invokable(&lab5, 1);
-    d_register_builder_invokable(&lab6);
-    
-    // Task handles
-    TaskHandle_t taskHandles[6] = { [0 ... 5] = NULL };
-    
-    // TX queue
-    txQ = xQueueCreate(20, sizeof(uint8_t) * d_UART_BUFFER_DEPTH);
-    
-    // LED n queue
-    for(i = 0; i < sizeof(lednQ); ++i)
-    {
-        lednQ[i] = xQueueCreate(5, sizeof(d_ledn_message));
-    }
-    
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     // RX argument
     static d_rx_parameter rxA;
     rxA.txQ = txQ;
     rxA.lednQ = lednQ;
-<<<<<<< HEAD
 
     // TX argument
     static d_tx_parameter txA;
     txA.txQ = txQ;
 
-=======
-    
-    // TX argument
-    static d_tx_parameter txA;
-    txA.txQ = txQ;
-    
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     // LED 0 argument
     static d_ledn_parameter led0A;
     led0A.id = 0;
     led0A.lednQ = lednQ[0];
     led0A.txQ = txQ;
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     // LED 1 argument
     static d_ledn_parameter led1A;
     led1A.id = 1;
     led1A.lednQ = lednQ[1];
     led1A.txQ = txQ;
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     // LED 2 argument
     static d_ledn_parameter led2A;
     led2A.id = 2;
     led2A.lednQ = lednQ[2];
     led2A.txQ = txQ;
-<<<<<<< HEAD
 
     // LED 0 task
     xTaskCreate(
@@ -571,58 +385,6 @@ static void d_labTasks(void)
                 2,
                 NULL
                 );
-=======
-    
-    // LED 0 task
-    xTaskCreate(
-            d_ledn,
-            "LED01",
-            configMINIMAL_STACK_SIZE,
-            (void *) &led0A,
-            1,
-            &taskHandles[0]
-    );
-    
-    // LED 1 task
-    xTaskCreate(
-            d_ledn,
-            "LED11",
-            configMINIMAL_STACK_SIZE,
-            (void *) &led1A,
-            1,
-            &taskHandles[1]
-    );
-    
-    // LED 2 task
-    xTaskCreate(
-            d_ledn,
-            "LED21",
-            configMINIMAL_STACK_SIZE,
-            (void *) &led2A,
-            1,
-            &taskHandles[2]
-    );
-    
-    // RX task
-    xTaskCreate(
-            d_rx,
-            "RX1",
-            configMINIMAL_STACK_SIZE,
-            (void *) &rxA,
-            3,
-            &taskHandles[3]
-    );
-    
-    // TX task
-    xTaskCreate(
-            d_tx,
-            "TX1",
-            configMINIMAL_STACK_SIZE,
-            (void *) &txA,
-            2,
-            &taskHandles[4]
-    );
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 }
 #endif
 
@@ -636,22 +398,14 @@ static void prvSetupHardware(void)
 
     // Setup LEDs (PORTD 0 - 2)
     d_initializeLedDriver();
-<<<<<<< HEAD
 
     // Setup switches (SW1 - SW3)
     d_initializeSwitchDriver();
 
-=======
-    
-    // Setup switches (SW1 - SW3)
-    d_initializeSwitchDriver();
-    
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     // Setup UART (UART1)
     d_initializeUARTDriver(UART1, 9600);
 }
 
-<<<<<<< HEAD
 void vApplicationMallocFailedHook(void)
 {
     /* vApplicationMallocFailedHook() will only be called if
@@ -737,86 +491,4 @@ void vAssertCalled(const char * pcFile, unsigned long ulLine)
         }
     }
     __asm volatile( "ei");
-=======
-void vApplicationMallocFailedHook( void )
-{
-	/* vApplicationMallocFailedHook() will only be called if
-	configUSE_MALLOC_FAILED_HOOK is set to 1 in FreeRTOSConfig.h.  It is a hook
-	function that will get called if a call to pvPortMalloc() fails.
-	pvPortMalloc() is called internally by the kernel whenever a task, queue,
-	timer or semaphore is created.  It is also called by various parts of the
-	demo application.  If heap_1.c or heap_2.c are used, then the size of the
-	heap available to pvPortMalloc() is defined by configTOTAL_HEAP_SIZE in
-	FreeRTOSConfig.h, and the xPortGetFreeHeapSize() API function can be used
-	to query the size of free heap space that remains (although it does not
-	provide information on how the remaining heap might be fragmented). */
-	taskDISABLE_INTERRUPTS();
-	for( ;; );
-}
-/*-----------------------------------------------------------*/
-
-void vApplicationIdleHook( void )
-{
-	/* vApplicationIdleHook() will only be called if configUSE_IDLE_HOOK is set
-	to 1 in FreeRTOSConfig.h.  It will be called on each iteration of the idle
-	task.  It is essential that code added to this hook function never attempts
-	to block in any way (for example, call xQueueReceive() with a block time
-	specified, or call vTaskDelay()).  If the application makes use of the
-	vTaskDelete() API function (as this demo application does) then it is also
-	important that vApplicationIdleHook() is permitted to return to its calling
-	function, because it is the responsibility of the idle task to clean up
-	memory allocated by the kernel to any task that has since been deleted. */
-}
-/*-----------------------------------------------------------*/
-
-void vApplicationStackOverflowHook( TaskHandle_t pxTask, char *pcTaskName )
-{
-	( void ) pcTaskName;
-	( void ) pxTask;
-
-	/* Run time task stack overflow checking is performed if
-	configCHECK_FOR_STACK_OVERFLOW is defined to 1 or 2.  This hook	function is 
-	called if a task stack overflow is detected.  Note the system/interrupt
-	stack is not checked. */
-	taskDISABLE_INTERRUPTS();
-	for( ;; );
-}
-/*-----------------------------------------------------------*/
-
-void vApplicationTickHook( void )
-{
-	/* This function will be called by each tick interrupt if
-	configUSE_TICK_HOOK is set to 1 in FreeRTOSConfig.h.  User code can be
-	added here, but the tick hook is called from an interrupt context, so
-	code must not attempt to block, and only the interrupt safe FreeRTOS API
-	functions can be used (those that end in FromISR()). */
-}
-/*-----------------------------------------------------------*/
-
-void _general_exception_handler( unsigned long ulCause, unsigned long ulStatus )
-{
-	/* This overrides the definition provided by the kernel.  Other exceptions 
-	should be handled here. */
-	for( ;; );
-}
-/*-----------------------------------------------------------*/
-
-void vAssertCalled( const char * pcFile, unsigned long ulLine )
-{
-volatile unsigned long ul = 0;
-
-	( void ) pcFile;
-	( void ) ulLine;
-
-	__asm volatile( "di" );
-	{
-		/* Set ul to a non-zero value using the debugger to step out of this
-		function. */
-		while( ul == 0 )
-		{
-			portNOP();
-		}
-	}
-	__asm volatile( "ei" );
->>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 }
