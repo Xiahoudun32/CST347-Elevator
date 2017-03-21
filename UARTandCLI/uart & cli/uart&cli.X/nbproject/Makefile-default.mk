@@ -51,6 +51,19 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
+<<<<<<< HEAD
+SOURCEFILES_QUOTED_IF_SPACED=src/leddrv.c src/swdrv.c src/isruartdrv.c ../../FreeRTOS/Source/list.c ../../FreeRTOS/Source/queue.c ../../FreeRTOS/Source/tasks.c ../../FreeRTOS/Source/portable/MemMang/heap_2.c ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S src/main.c src/myTasks.c src/isr_registry.S src/ButtonPollingTask.c src/ElevatorControl.c
+
+# Object Files Quoted if spaced
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/src/leddrv.o ${OBJECTDIR}/src/swdrv.o ${OBJECTDIR}/src/isruartdrv.o ${OBJECTDIR}/_ext/1147412712/list.o ${OBJECTDIR}/_ext/1147412712/queue.o ${OBJECTDIR}/_ext/1147412712/tasks.o ${OBJECTDIR}/_ext/1386115845/heap_2.o ${OBJECTDIR}/_ext/843873358/port.o ${OBJECTDIR}/_ext/843873358/port_asm.o ${OBJECTDIR}/src/main.o ${OBJECTDIR}/src/myTasks.o ${OBJECTDIR}/src/isr_registry.o ${OBJECTDIR}/src/ButtonPollingTask.o ${OBJECTDIR}/src/ElevatorControl.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/src/leddrv.o.d ${OBJECTDIR}/src/swdrv.o.d ${OBJECTDIR}/src/isruartdrv.o.d ${OBJECTDIR}/_ext/1147412712/list.o.d ${OBJECTDIR}/_ext/1147412712/queue.o.d ${OBJECTDIR}/_ext/1147412712/tasks.o.d ${OBJECTDIR}/_ext/1386115845/heap_2.o.d ${OBJECTDIR}/_ext/843873358/port.o.d ${OBJECTDIR}/_ext/843873358/port_asm.o.d ${OBJECTDIR}/src/main.o.d ${OBJECTDIR}/src/myTasks.o.d ${OBJECTDIR}/src/isr_registry.o.d ${OBJECTDIR}/src/ButtonPollingTask.o.d ${OBJECTDIR}/src/ElevatorControl.o.d
+
+# Object Files
+OBJECTFILES=${OBJECTDIR}/src/leddrv.o ${OBJECTDIR}/src/swdrv.o ${OBJECTDIR}/src/isruartdrv.o ${OBJECTDIR}/_ext/1147412712/list.o ${OBJECTDIR}/_ext/1147412712/queue.o ${OBJECTDIR}/_ext/1147412712/tasks.o ${OBJECTDIR}/_ext/1386115845/heap_2.o ${OBJECTDIR}/_ext/843873358/port.o ${OBJECTDIR}/_ext/843873358/port_asm.o ${OBJECTDIR}/src/main.o ${OBJECTDIR}/src/myTasks.o ${OBJECTDIR}/src/isr_registry.o ${OBJECTDIR}/src/ButtonPollingTask.o ${OBJECTDIR}/src/ElevatorControl.o
+
+# Source Files
+SOURCEFILES=src/leddrv.c src/swdrv.c src/isruartdrv.c ../../FreeRTOS/Source/list.c ../../FreeRTOS/Source/queue.c ../../FreeRTOS/Source/tasks.c ../../FreeRTOS/Source/portable/MemMang/heap_2.c ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S src/main.c src/myTasks.c src/isr_registry.S src/ButtonPollingTask.c src/ElevatorControl.c
+=======
 SOURCEFILES_QUOTED_IF_SPACED=src/leddrv.c src/swdrv.c src/isruartdrv.c ../../FreeRTOS/Source/list.c ../../FreeRTOS/Source/queue.c ../../FreeRTOS/Source/tasks.c ../../FreeRTOS/Source/portable/MemMang/heap_2.c ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S src/main.c src/myTasks.c src/isr_registry.S
 
 # Object Files Quoted if spaced
@@ -62,6 +75,7 @@ OBJECTFILES=${OBJECTDIR}/src/leddrv.o ${OBJECTDIR}/src/swdrv.o ${OBJECTDIR}/src/
 
 # Source Files
 SOURCEFILES=src/leddrv.c src/swdrv.c src/isruartdrv.c ../../FreeRTOS/Source/list.c ../../FreeRTOS/Source/queue.c ../../FreeRTOS/Source/tasks.c ../../FreeRTOS/Source/portable/MemMang/heap_2.c ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S src/main.c src/myTasks.c src/isr_registry.S
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 
 
 CFLAGS=
@@ -99,14 +113,22 @@ ${OBJECTDIR}/_ext/843873358/port_asm.o: ../../FreeRTOS/Source/portable/MPLAB/PIC
 	@${RM} ${OBJECTDIR}/_ext/843873358/port_asm.o.d 
 	@${RM} ${OBJECTDIR}/_ext/843873358/port_asm.o 
 	@${RM} ${OBJECTDIR}/_ext/843873358/port_asm.o.ok ${OBJECTDIR}/_ext/843873358/port_asm.o.err 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/843873358/port_asm.o.d" "${OBJECTDIR}/_ext/843873358/port_asm.o.asm.d" -t $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC} $(MP_EXTRA_AS_PRE)  -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/843873358/port_asm.o.d"  -o ${OBJECTDIR}/_ext/843873358/port_asm.o ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S  -DXPRJ_default=$(CND_CONF)  -legacy-libc  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),-MD="${OBJECTDIR}/_ext/843873358/port_asm.o.asm.d",--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--gdwarf-2,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_REAL_ICE=1
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/843873358/port_asm.o.d" "${OBJECTDIR}/_ext/843873358/port_asm.o.asm.d" -t $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC} $(MP_EXTRA_AS_PRE)  -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/843873358/port_asm.o.d"  -o ${OBJECTDIR}/_ext/843873358/port_asm.o ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S  -DXPRJ_default=$(CND_CONF)  -legacy-libc  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),-MD="${OBJECTDIR}/_ext/843873358/port_asm.o.asm.d",--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--gdwarf-2,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_REAL_ICE=1
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/src/isr_registry.o: src/isr_registry.S  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/isr_registry.o.d 
 	@${RM} ${OBJECTDIR}/src/isr_registry.o 
 	@${RM} ${OBJECTDIR}/src/isr_registry.o.ok ${OBJECTDIR}/src/isr_registry.o.err 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/isr_registry.o.d" "${OBJECTDIR}/src/isr_registry.o.asm.d" -t $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC} $(MP_EXTRA_AS_PRE)  -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/isr_registry.o.d"  -o ${OBJECTDIR}/src/isr_registry.o src/isr_registry.S  -DXPRJ_default=$(CND_CONF)  -legacy-libc  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),-MD="${OBJECTDIR}/src/isr_registry.o.asm.d",--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--gdwarf-2,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_REAL_ICE=1
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/isr_registry.o.d" "${OBJECTDIR}/src/isr_registry.o.asm.d" -t $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC} $(MP_EXTRA_AS_PRE)  -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/isr_registry.o.d"  -o ${OBJECTDIR}/src/isr_registry.o src/isr_registry.S  -DXPRJ_default=$(CND_CONF)  -legacy-libc  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),-MD="${OBJECTDIR}/src/isr_registry.o.asm.d",--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--gdwarf-2,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_REAL_ICE=1
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 else
 ${OBJECTDIR}/_ext/843873358/port_asm.o: ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S  nbproject/Makefile-${CND_CONF}.mk
@@ -114,14 +136,22 @@ ${OBJECTDIR}/_ext/843873358/port_asm.o: ../../FreeRTOS/Source/portable/MPLAB/PIC
 	@${RM} ${OBJECTDIR}/_ext/843873358/port_asm.o.d 
 	@${RM} ${OBJECTDIR}/_ext/843873358/port_asm.o 
 	@${RM} ${OBJECTDIR}/_ext/843873358/port_asm.o.ok ${OBJECTDIR}/_ext/843873358/port_asm.o.err 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/843873358/port_asm.o.d" "${OBJECTDIR}/_ext/843873358/port_asm.o.asm.d" -t $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC} $(MP_EXTRA_AS_PRE)  -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/843873358/port_asm.o.d"  -o ${OBJECTDIR}/_ext/843873358/port_asm.o ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S  -DXPRJ_default=$(CND_CONF)  -legacy-libc  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),-MD="${OBJECTDIR}/_ext/843873358/port_asm.o.asm.d",--gdwarf-2
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/843873358/port_asm.o.d" "${OBJECTDIR}/_ext/843873358/port_asm.o.asm.d" -t $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC} $(MP_EXTRA_AS_PRE)  -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/843873358/port_asm.o.d"  -o ${OBJECTDIR}/_ext/843873358/port_asm.o ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S  -DXPRJ_default=$(CND_CONF)  -legacy-libc  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),-MD="${OBJECTDIR}/_ext/843873358/port_asm.o.asm.d",--gdwarf-2
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/src/isr_registry.o: src/isr_registry.S  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/isr_registry.o.d 
 	@${RM} ${OBJECTDIR}/src/isr_registry.o 
 	@${RM} ${OBJECTDIR}/src/isr_registry.o.ok ${OBJECTDIR}/src/isr_registry.o.err 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/isr_registry.o.d" "${OBJECTDIR}/src/isr_registry.o.asm.d" -t $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC} $(MP_EXTRA_AS_PRE)  -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/isr_registry.o.d"  -o ${OBJECTDIR}/src/isr_registry.o src/isr_registry.S  -DXPRJ_default=$(CND_CONF)  -legacy-libc  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),-MD="${OBJECTDIR}/src/isr_registry.o.asm.d",--gdwarf-2
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/isr_registry.o.d" "${OBJECTDIR}/src/isr_registry.o.asm.d" -t $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC} $(MP_EXTRA_AS_PRE)  -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/isr_registry.o.d"  -o ${OBJECTDIR}/src/isr_registry.o src/isr_registry.S  -DXPRJ_default=$(CND_CONF)  -legacy-libc  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),-MD="${OBJECTDIR}/src/isr_registry.o.asm.d",--gdwarf-2
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 endif
 
@@ -132,122 +162,226 @@ ${OBJECTDIR}/src/leddrv.o: src/leddrv.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/leddrv.o.d 
 	@${RM} ${OBJECTDIR}/src/leddrv.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/leddrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/leddrv.o.d" -o ${OBJECTDIR}/src/leddrv.o src/leddrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/leddrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/leddrv.o.d" -o ${OBJECTDIR}/src/leddrv.o src/leddrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/src/swdrv.o: src/swdrv.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/swdrv.o.d 
 	@${RM} ${OBJECTDIR}/src/swdrv.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/swdrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/swdrv.o.d" -o ${OBJECTDIR}/src/swdrv.o src/swdrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/swdrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/swdrv.o.d" -o ${OBJECTDIR}/src/swdrv.o src/swdrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/src/isruartdrv.o: src/isruartdrv.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/isruartdrv.o.d 
 	@${RM} ${OBJECTDIR}/src/isruartdrv.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/isruartdrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/isruartdrv.o.d" -o ${OBJECTDIR}/src/isruartdrv.o src/isruartdrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/isruartdrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/isruartdrv.o.d" -o ${OBJECTDIR}/src/isruartdrv.o src/isruartdrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/_ext/1147412712/list.o: ../../FreeRTOS/Source/list.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1147412712" 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/list.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/list.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/list.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/1147412712/list.o.d" -o ${OBJECTDIR}/_ext/1147412712/list.o ../../FreeRTOS/Source/list.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/list.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/1147412712/list.o.d" -o ${OBJECTDIR}/_ext/1147412712/list.o ../../FreeRTOS/Source/list.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/_ext/1147412712/queue.o: ../../FreeRTOS/Source/queue.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1147412712" 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/queue.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/queue.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/queue.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/1147412712/queue.o.d" -o ${OBJECTDIR}/_ext/1147412712/queue.o ../../FreeRTOS/Source/queue.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/queue.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/1147412712/queue.o.d" -o ${OBJECTDIR}/_ext/1147412712/queue.o ../../FreeRTOS/Source/queue.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/_ext/1147412712/tasks.o: ../../FreeRTOS/Source/tasks.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1147412712" 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/tasks.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/tasks.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/tasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/1147412712/tasks.o.d" -o ${OBJECTDIR}/_ext/1147412712/tasks.o ../../FreeRTOS/Source/tasks.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/tasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/1147412712/tasks.o.d" -o ${OBJECTDIR}/_ext/1147412712/tasks.o ../../FreeRTOS/Source/tasks.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/_ext/1386115845/heap_2.o: ../../FreeRTOS/Source/portable/MemMang/heap_2.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1386115845" 
 	@${RM} ${OBJECTDIR}/_ext/1386115845/heap_2.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1386115845/heap_2.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1386115845/heap_2.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/1386115845/heap_2.o.d" -o ${OBJECTDIR}/_ext/1386115845/heap_2.o ../../FreeRTOS/Source/portable/MemMang/heap_2.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1386115845/heap_2.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/1386115845/heap_2.o.d" -o ${OBJECTDIR}/_ext/1386115845/heap_2.o ../../FreeRTOS/Source/portable/MemMang/heap_2.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/_ext/843873358/port.o: ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/843873358" 
 	@${RM} ${OBJECTDIR}/_ext/843873358/port.o.d 
 	@${RM} ${OBJECTDIR}/_ext/843873358/port.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/843873358/port.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/843873358/port.o.d" -o ${OBJECTDIR}/_ext/843873358/port.o ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/843873358/port.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/843873358/port.o.d" -o ${OBJECTDIR}/_ext/843873358/port.o ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/src/main.o: src/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/main.o.d 
 	@${RM} ${OBJECTDIR}/src/main.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/main.o.d" -o ${OBJECTDIR}/src/main.o src/main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/main.o.d" -o ${OBJECTDIR}/src/main.o src/main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/src/myTasks.o: src/myTasks.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/myTasks.o.d 
 	@${RM} ${OBJECTDIR}/src/myTasks.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/myTasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/myTasks.o.d" -o ${OBJECTDIR}/src/myTasks.o src/myTasks.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/src/ButtonPollingTask.o: src/ButtonPollingTask.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/src" 
+	@${RM} ${OBJECTDIR}/src/ButtonPollingTask.o.d 
+	@${RM} ${OBJECTDIR}/src/ButtonPollingTask.o 
+	@${FIXDEPS} "${OBJECTDIR}/src/ButtonPollingTask.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/ButtonPollingTask.o.d" -o ${OBJECTDIR}/src/ButtonPollingTask.o src/ButtonPollingTask.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/src/ElevatorControl.o: src/ElevatorControl.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/src" 
+	@${RM} ${OBJECTDIR}/src/ElevatorControl.o.d 
+	@${RM} ${OBJECTDIR}/src/ElevatorControl.o 
+	@${FIXDEPS} "${OBJECTDIR}/src/ElevatorControl.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/ElevatorControl.o.d" -o ${OBJECTDIR}/src/ElevatorControl.o src/ElevatorControl.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/myTasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/myTasks.o.d" -o ${OBJECTDIR}/src/myTasks.o src/myTasks.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 else
 ${OBJECTDIR}/src/leddrv.o: src/leddrv.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/leddrv.o.d 
 	@${RM} ${OBJECTDIR}/src/leddrv.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/leddrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/leddrv.o.d" -o ${OBJECTDIR}/src/leddrv.o src/leddrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/leddrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/leddrv.o.d" -o ${OBJECTDIR}/src/leddrv.o src/leddrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/src/swdrv.o: src/swdrv.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/swdrv.o.d 
 	@${RM} ${OBJECTDIR}/src/swdrv.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/swdrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/swdrv.o.d" -o ${OBJECTDIR}/src/swdrv.o src/swdrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/swdrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/swdrv.o.d" -o ${OBJECTDIR}/src/swdrv.o src/swdrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/src/isruartdrv.o: src/isruartdrv.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/isruartdrv.o.d 
 	@${RM} ${OBJECTDIR}/src/isruartdrv.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/isruartdrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/isruartdrv.o.d" -o ${OBJECTDIR}/src/isruartdrv.o src/isruartdrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/isruartdrv.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/isruartdrv.o.d" -o ${OBJECTDIR}/src/isruartdrv.o src/isruartdrv.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/_ext/1147412712/list.o: ../../FreeRTOS/Source/list.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1147412712" 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/list.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/list.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/list.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/1147412712/list.o.d" -o ${OBJECTDIR}/_ext/1147412712/list.o ../../FreeRTOS/Source/list.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/list.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/1147412712/list.o.d" -o ${OBJECTDIR}/_ext/1147412712/list.o ../../FreeRTOS/Source/list.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/_ext/1147412712/queue.o: ../../FreeRTOS/Source/queue.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1147412712" 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/queue.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/queue.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/queue.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/1147412712/queue.o.d" -o ${OBJECTDIR}/_ext/1147412712/queue.o ../../FreeRTOS/Source/queue.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/queue.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/1147412712/queue.o.d" -o ${OBJECTDIR}/_ext/1147412712/queue.o ../../FreeRTOS/Source/queue.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/_ext/1147412712/tasks.o: ../../FreeRTOS/Source/tasks.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1147412712" 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/tasks.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1147412712/tasks.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/tasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/1147412712/tasks.o.d" -o ${OBJECTDIR}/_ext/1147412712/tasks.o ../../FreeRTOS/Source/tasks.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1147412712/tasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/1147412712/tasks.o.d" -o ${OBJECTDIR}/_ext/1147412712/tasks.o ../../FreeRTOS/Source/tasks.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/_ext/1386115845/heap_2.o: ../../FreeRTOS/Source/portable/MemMang/heap_2.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1386115845" 
 	@${RM} ${OBJECTDIR}/_ext/1386115845/heap_2.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1386115845/heap_2.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1386115845/heap_2.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/1386115845/heap_2.o.d" -o ${OBJECTDIR}/_ext/1386115845/heap_2.o ../../FreeRTOS/Source/portable/MemMang/heap_2.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1386115845/heap_2.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/1386115845/heap_2.o.d" -o ${OBJECTDIR}/_ext/1386115845/heap_2.o ../../FreeRTOS/Source/portable/MemMang/heap_2.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/_ext/843873358/port.o: ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/843873358" 
 	@${RM} ${OBJECTDIR}/_ext/843873358/port.o.d 
 	@${RM} ${OBJECTDIR}/_ext/843873358/port.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/_ext/843873358/port.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/_ext/843873358/port.o.d" -o ${OBJECTDIR}/_ext/843873358/port.o ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/_ext/843873358/port.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/_ext/843873358/port.o.d" -o ${OBJECTDIR}/_ext/843873358/port.o ../../FreeRTOS/Source/portable/MPLAB/PIC32MX/port.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/src/main.o: src/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/main.o.d 
 	@${RM} ${OBJECTDIR}/src/main.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/main.o.d" -o ${OBJECTDIR}/src/main.o src/main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/main.o.d" -o ${OBJECTDIR}/src/main.o src/main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 ${OBJECTDIR}/src/myTasks.o: src/myTasks.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/src" 
 	@${RM} ${OBJECTDIR}/src/myTasks.o.d 
 	@${RM} ${OBJECTDIR}/src/myTasks.o 
+<<<<<<< HEAD
+	@${FIXDEPS} "${OBJECTDIR}/src/myTasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/myTasks.o.d" -o ${OBJECTDIR}/src/myTasks.o src/myTasks.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/src/ButtonPollingTask.o: src/ButtonPollingTask.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/src" 
+	@${RM} ${OBJECTDIR}/src/ButtonPollingTask.o.d 
+	@${RM} ${OBJECTDIR}/src/ButtonPollingTask.o 
+	@${FIXDEPS} "${OBJECTDIR}/src/ButtonPollingTask.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/ButtonPollingTask.o.d" -o ${OBJECTDIR}/src/ButtonPollingTask.o src/ButtonPollingTask.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/src/ElevatorControl.o: src/ElevatorControl.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/src" 
+	@${RM} ${OBJECTDIR}/src/ElevatorControl.o.d 
+	@${RM} ${OBJECTDIR}/src/ElevatorControl.o 
+	@${FIXDEPS} "${OBJECTDIR}/src/ElevatorControl.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -I"include" -MMD -MF "${OBJECTDIR}/src/ElevatorControl.o.d" -o ${OBJECTDIR}/src/ElevatorControl.o src/ElevatorControl.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+=======
 	@${FIXDEPS} "${OBJECTDIR}/src/myTasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -I"./include" -I"../../FreeRTOS/Source/include" -I"../../FreeRTOS/Source/portable/MPLAB/PIC32MX" -I"../../FreeRTOS-Plus-CLI" -MMD -MF "${OBJECTDIR}/src/myTasks.o.d" -o ${OBJECTDIR}/src/myTasks.o src/myTasks.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD) 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
 	
 endif
 

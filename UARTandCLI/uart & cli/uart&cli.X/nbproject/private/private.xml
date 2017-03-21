@@ -3,6 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/z:/desktop/CST347-Elevator-master/UARTandCLI/uart%20&amp;%20cli/uart&amp;cli.X/include/leddrv.h</file>
+            <file>file:/z:/desktop/CST347-Elevator-master/UARTandCLI/uart%20&amp;%20cli/uart&amp;cli.X/include/ButtonPollingTask.h</file>
+            <file>file:/z:/desktop/CST347-Elevator-master/UARTandCLI/uart%20&amp;%20cli/uart&amp;cli.X/src/main.c</file>
+            <file>file:/z:/desktop/CST347-Elevator-master/UARTandCLI/uart%20&amp;%20cli/uart&amp;cli.X/src/ButtonPollingTask.c</file>
+            <file>file:/z:/desktop/CST347-Elevator-master/UARTandCLI/uart%20&amp;%20cli/uart&amp;cli.X/src/leddrv.c</file>
+            <file>file:/z:/desktop/CST347-Elevator-master/UARTandCLI/uart%20&amp;%20cli/uart&amp;cli.X/include/ElevatorControl.h</file>
+            <file>file:/Z:/desktop/CST347-Elevator-master/UARTandCLI/FreeRTOS/Source/include/queue.h</file>
+            <file>file:/z:/desktop/CST347-Elevator-master/UARTandCLI/uart%20&amp;%20cli/uart&amp;cli.X/src/ElevatorControl.c</file>
+=======
             <file>file:/Z:/OIT/CST347/labs/lab06/lab06.X/src/isruartdrv.c</file>
             <file>file:/Z:/OIT/CST347/labs/lab06/lab06.X/src/leddrv.c</file>
             <file>file:/Z:/OIT/CST347/labs/FreeRTOS/Source/portable/MPLAB/PIC32MX/port_asm.S</file>
@@ -12,6 +22,7 @@
             <file>file:/Z:/OIT/CST347/labs/lab06/lab06.X/include/myTasks.h</file>
             <file>file:/Z:/OIT/CST347/labs/lab06/lab06.X/include/leddrv.h</file>
             <file>file:/Z:/OIT/CST347/labs/FreeRTOS/Source/tasks.c</file>
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
         </group>
     </open-files>
 </project-private>

@@ -22,4 +22,10 @@ include/isruartdrv.h  \
  ../../FreeRTOS/Source/include/queue.h  \
 include/leddrv.h  \
 include/swdrv.h  \
+<<<<<<< HEAD
+ include/isruartdrv.h  \
+include/ElevatorControl.h  \
+ include/ButtonPollingTask.h 
+=======
  include/isruartdrv.h 
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 [{000214A0-0000-0000-C000-000000000046}]
 Prop3=19,2
 [InternetShortcut]
 URL=http://www.freertos.org/a00111.html
 IDList=
+=======
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2
+[InternetShortcut]
+URL=http://www.freertos.org/a00111.html
+IDList=
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e

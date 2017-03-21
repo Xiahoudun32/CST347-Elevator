@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
+<<<<<<< HEAD
+  <executable name="dist/default/production/uart_cli.X.production.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>531968</length>                 
+      <used>58566</used>                     
+      <free>473402</free>                     
+=======
   <executable name="dist/default/production/lab06.X.production.elf">                 
     <memory name="program">                 
       <units>bytes</units>                 
       <length>531968</length>                 
       <used>49250</used>                     
       <free>482718</free>                     
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     </memory>                              
     <memory name="data">              
       <units>bytes</units>                 
       <length>32768</length>                 
+<<<<<<< HEAD
+      <used>31216</used>                     
+      <free>1552</free>                     
+=======
       <used>31004</used>                     
       <free>1764</free>                     
+>>>>>>> d21edf9bb8704bb4e9691e1b03cfab57b2fd211e
     </memory>                              
   </executable>                            
 </project>                                 
